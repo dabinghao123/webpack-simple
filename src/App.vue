@@ -27,6 +27,12 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted(){
+  console.log("create");
+      this.$http.get('/api/data').then(function(res){
+        console.log(res);
+      })
   }
 }
 </script>
